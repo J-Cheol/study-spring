@@ -21,4 +21,10 @@ public class SpringConfig
     {
         return new MemoryMemberRepository();
     }
+
+    @Bean
+    public MemberService memberTest()
+    {
+        return new MemberService(memberRepository());
+    }
 }
